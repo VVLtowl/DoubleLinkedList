@@ -145,6 +145,9 @@
   <ItemGroup>
     <ClInclude Include="double_linked_list.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Scores.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
