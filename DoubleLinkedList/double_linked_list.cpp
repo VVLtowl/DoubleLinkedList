@@ -1,4 +1,4 @@
-﻿//#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -201,7 +201,8 @@ DoubleLinkedList::Node* DoubleLinkedList::Iterator::operator&()
 */
 bool DoubleLinkedList::PushBack(DoubleLinkedList::Node* newNode)
 {
-	return Insert(CEnd(), newNode);
+	DoubleLinkedList::Iterator iter = End();
+	return Insert(iter, newNode);
 }
 bool DoubleLinkedList::PushBack(int score, const char* name)
 {

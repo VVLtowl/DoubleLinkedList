@@ -70,28 +70,14 @@ int main(void)
 
 		
 #if 1
-		DoubleLinkedList::Iterator it = list.Head();
-		DoubleLinkedList::Iterator tail = list.Tail();
-		//DoubleLinkedList::ConstIterator it = list.ConstHead();
-		//DoubleLinkedList::ConstIterator tail= list.ConstTail();
-		DoubleLinkedList::Node* node = nullptr;
-		while (1)
+		DoubleLinkedList::Iterator it = list.Begin();
+		
+		for (; it != list.End(); ++it)
 		{
-			if ((node = it.GetNode()) != nullptr)
-			{
-				cout << node->scoreData.name
-					<< (strlen( node->scoreData.name)< 8 ? "\t\t:" : "\t:")
-					<< node->scoreData.score << endl;
-			}
-
-			if (it != tail)
-			{
-				++it;
-			}
-			else
-			{
-				break;
-			}
+			cout << (*it).scoreData.name
+				<< (strlen((*it).scoreData.name) < 8 ? "\t\t:" : "\t:")
+				<< (*it).scoreData.score 
+				<< endl;
 		}
 #endif
 	}
